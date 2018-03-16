@@ -96,7 +96,7 @@ $(document).on("click", '.close-button-modal', function(e) {
 //search function
 $('#employee-search').keyup(function() {
     $('.employee').css('display', 'none');
-    searchField = $('#employee-search').val();
+    searchField = $('#employee-search').val().toLowerCase();
     $.each(employees, function (i, employee) {
         var a = employee.name.first.toString().includes(searchField);
         var b = employee.name.last.toString().includes(searchField);
